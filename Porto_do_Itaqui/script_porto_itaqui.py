@@ -124,7 +124,7 @@ for esp in range(navios_esp):
     
 df = pd.DataFrame(list(zip(Navios_Esperando['Berco'], Navios_Esperando['IMO'], Navios_Esperando['NAVIO'], Navios_Esperando['Operacao'], Navios_Esperando['Bordo'], Navios_Esperando['Comp(m)'], Navios_Esperando['DWT'],
                   Navios_Esperando['Carga'], Navios_Esperando['QTD.CARGA'], Navios_Esperando['Calado'], Navios_Esperando['Agencia'], Navios_Esperando['Ultima_Atualizao'])), columns=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"])
-df.to_csv("/home/aline/Documentos/PROJETO_3/dados_dos_navios_esperando.csv", index=False)
+df.to_csv("/home/aline/Documentos/PROJETO_3/Porto_do_Itaqui/dados_dos_navios_esperando.csv", index=False)
 # print(df)
 print("Dados dos Navios - Esperando Salvos")
 
@@ -176,7 +176,7 @@ for esp in range(navios_fundi):
     
 df = pd.DataFrame(list(zip( Navios_Fundeados['IMO'], Navios_Fundeados['NAVIO'], Navios_Fundeados['Operacao'], Navios_Fundeados['Comp(m)'], Navios_Fundeados['DWT'],
                   Navios_Fundeados['Carga'], Navios_Fundeados['QTD.CARGA'], Navios_Fundeados['Calado'], Navios_Fundeados['Agencia'], Navios_Fundeados['Ultima_Atualizao'])), columns=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-df.to_csv("/home/aline/Documentos/PROJETO_3/dados_dos_navios_fundeados.csv", index=False)
+df.to_csv("/home/aline/Documentos/PROJETO_3/Porto_do_Itaqui/dados_dos_navios_fundeados.csv", index=False)
 # print(df)
 print("Dados dos Navios -  Fundeados Salvos")
 
@@ -233,6 +233,6 @@ for esp in range(navios_atrac):
 
 df = pd.DataFrame(list(zip(Navios_Atracados['IMO'], Navios_Atracados['NAVIO'], Navios_Atracados['Operacao'], Navios_Atracados['Comp(m)'], Navios_Atracados['DWT'],
                   Navios_Atracados['Carga'], Navios_Atracados['QTD.CARGA'], Navios_Atracados['Calado'], Navios_Atracados['Agencia'],Navios_Atracados['Prev de Chegada'], Navios_Atracados['Ultima_Atualizao'])), columns=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"])
-df.to_csv("/home/aline/Documentos/PROJETO_3/dados_dos_navios_atracados.csv", index=False)
+df.to_csv("/home/aline/Documentos/PROJETO_3/Porto_do_Itaqui/dados_dos_navios_atracados.csv", index=False)
 # print(df)
 print("Dados dos Navios - Atracados Salvos")
