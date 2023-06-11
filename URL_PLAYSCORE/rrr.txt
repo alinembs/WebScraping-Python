@@ -1,0 +1,73 @@
+'''  for game in dic_response['data']:
+
+            jogo["Date"].append(game['date'])
+
+            jogo["Venue"].append(game['venue'])
+            jogo["Coordinates"].append(game['coordinates'])
+            jogo["homeFormation"].append(game['homeFormation'])
+            jogo["awayFormation"].append(game['awayFormation'])
+
+            jogo["HomeName"].append(game['homeTeam']['name'])
+            jogo["AwayName"].append(game['awayTeam']['name'])
+
+            jogo["currentTime"]["minute"].append(game['currentTime']['minute'])
+            jogo["currentTime"]["second"].append(game['currentTime']['second'])
+
+            jogo["league"].append(game['league']['name'])
+
+            jogo["HomeScores"].append(game['scores']['homeTeamScore'])
+            jogo["AwayScores"].append(game['score']['awayTeamScore'])
+
+            jogo["weatherReport"]['code'].append(game['weatherReport']['code'])
+            jogo["weatherReport"]['condition'].append(
+                game['weatherReport']['condition'])
+            jogo["weatherReport"]['temperature'].append(
+                game['weatherReport']['temperature'])
+            jogo["weatherReport"]['clouds'].append(
+                game['weatherReport']['clouds'])
+            jogo["weatherReport"]['humidity'].append(
+                game['weatherReport']['humidity'])
+            jogo["weatherReport"]['pressure'].append(
+                game['weatherReport']['pressure'])
+            jogo["weatherReport"]['wind'].append(game['weatherReport']['wind'])
+
+            jogo['Probabilities']['AT_over_0_5'].append(
+                game['probabilities']['AT_over_0_5'])
+            jogo['Probabilities']['AT_over_1_5'].append(
+                game['probabilities']['AT_over_1_5'])
+            jogo['Probabilities']['AT_under_0_5'].append(
+                game['probabilities']['AT_under_0_5'])
+            jogo['Probabilities']['AT_under_1_5'].append(
+                game['probabilities']['AT_under_1_5'])
+            jogo['Probabilities']['HT_over_0_5'].append(
+                game['probabilities']['HT_over_0_5'])
+            jogo['Probabilities']['HT_over_1_5'].append(
+                game['probabilities']['HT_over_1_5'])
+            jogo['Probabilities']['HT_under_0_5'].append(
+                game['probabilities']['HT_under_0_5'])
+            jogo['Probabilities']['HT_under_1_5'].append(
+                game['probabilities']['HT_under_1_5'])
+            jogo['Probabilities']['away'].append(game['probabilities']['away'])
+            jogo['Probabilities']['btts'].append(game['probabilities']['btts'])
+            jogo['Probabilities']['draw'].append(game['probabilities']['draw'])
+            jogo['Probabilities']['home'].append(game['probabilities']['home'])
+            jogo['Probabilities']['over_0_5'].append(
+                game['probabilities']['over_0_5'])
+            jogo['Probabilities']['over_1_5'].append(
+                game['probabilities']['over_1_5'])
+            jogo['Probabilities']['over_2_5'].append(
+                game['probabilities']['over_2_5'])
+            jogo['Probabilities']['over_3_5'].append(
+                game['probabilities']['over_3_5'])
+            jogo['Probabilities']['under_0_5'].append(
+                game['probabilities']['under_0_5'])
+            jogo['Probabilities']['under_1_5'].append(
+                game['probabilities']['under_1_5'])
+            jogo['Probabilities']['under_2_5'].append(
+                game['probabilities']['under_2_5'])
+            jogo['Probabilities']['under_3_5'].append(
+                game['probabilities']['under_3_5'])
+    
+
+print("Finalizou")'''
+    

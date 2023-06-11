@@ -1,0 +1,31 @@
+Esporte,Data,Liga,Home,Away,Odd Home,Odd Draw,Odd Away,Ambas Marcam Sim,Ambas Marcam Não,Home ou X,X ou Away,Home ou Away,Gols: + 0.5,Gols : -0.5,Gols: + 1.5,Gols : -1.5,Gols: + 2.5,Gols : -2.5,Gols: + 3.5,Gols : -3.5
+Futebol,2023-06-14T18:45:00Z,Liga das Nações,Holanda,Croácia,2.0,3.3,3.6,1.93,1.75,1.27,1.75,1.31,1.07,7.75,1.37,2.8,2.1,1.63,3.8,1.23
+Futebol,2023-06-15T18:45:00Z,Liga das Nações,Espanha,Itália,2.25,3.2,3.2,2.0,1.7,1.33,1.61,1.34,1.09,6.75,1.44,2.6,2.3,1.53,4.33,1.19
+Futebol,2023-06-11T18:45:00Z,Série A,Spezia,Hellas Verona,2.8,3.0,2.7,2.05,1.68,1.44,1.41,1.37,1.1,6.25,1.47,2.5,2.4,1.51,4.5,1.18
+Futebol,2023-06-11T19:15:00Z,Primeira Liga,CS Maritimo Funchal,CF Estrela da Amadora,1.77,3.5,4.5,1.88,1.8,1.19,1.98,1.28,1.06,8.5,1.32,3.1,1.95,1.75,3.3,1.28
+Futebol,2023-06-11T12:30:00Z,Campeonato Holandês,Twente,Sparta Rotterdam,1.12,6.5,29.0,6.75,26.0,1.0,5.5,1.09,61.0,1.0,1.51,2.25,9.5,1.03,26.0,1.0
+Futebol,2023-06-11T16:00:00Z,Campeonato Holandês,FC Emmen,Almere City FC,1.8,3.7,4.0,1.66,2.05,1.23,1.93,1.26,4.8,1.16,2.7,1.41,1.68,2.0,1.23,3.8
+Futebol,2023-06-12T17:00:00Z,Primera División - Argentina,Newell's Old Boys,Unión de Santa Fe,2.0,3.1,3.9,2.3,1.55,1.24,1.75,1.35,1.11,6.0,1.53,2.3,2.6,1.43,5.0,1.14
+Futebol,2023-06-12T20:00:00Z,Primera División - Argentina,San Lorenzo,Central Córdoba,1.85,3.1,4.75,2.4,1.5,1.18,1.9,1.34,1.12,5.75,1.55,2.25,2.65,1.42,5.25,1.13
+Futebol,2023-06-12T22:15:00Z,Primera División - Argentina,Banfield,River Plate,4.5,3.5,1.77,1.98,1.73,1.98,1.19,1.28,1.07,8.0,1.35,2.95,2.05,1.68,3.6,1.25
+Futebol,2023-06-13T00:45:00Z,Primera División - Argentina,Vélez Sarsfield,Argentinos Juniors,3.0,2.95,2.45,2.15,1.6,1.51,1.36,1.37,5.0,1.15,2.55,1.44,1.52,2.35,1.11,6.0
+Futebol,2023-06-13T00:45:00Z,Primera División - Argentina,Instituto AC Cordoba,Racing,2.37,3.2,2.9,1.98,1.73,1.38,1.55,1.33,1.08,7.25,1.41,2.65,2.2,1.57,4.1,1.2
+Futebol,2023-06-13T21:00:00Z,Primera División - Argentina,Colón,Estudiantes,3.2,3.0,2.3,2.1,1.63,1.58,1.32,1.36,4.75,1.16,2.45,1.47,1.49,2.4,1.1,6.25
+Futebol,2023-06-13T21:00:00Z,Primera División - Argentina,Defensa y Justicia,CA Belgrano de Cordoba,1.87,3.4,4.1,2.05,1.68,1.22,1.87,1.3,1.08,7.25,1.4,2.7,2.2,1.58,4.0,1.21
+Futebol,2023-06-13T23:30:00Z,Primera División - Argentina,Gimnasia Y Esgrima La Plata,Huracán,2.75,3.1,2.6,2.05,1.66,1.47,1.42,1.35,1.1,6.5,1.47,2.5,2.4,1.5,4.6,1.17
+Futebol,2023-06-13T23:30:00Z,Primera División - Argentina,Atlético Tucumán,Godoy Cruz,2.55,3.1,2.75,1.88,1.8,1.43,1.47,1.34,1.08,7.5,1.38,2.8,2.15,1.62,3.8,1.23
+Futebol,2023-06-11T14:00:00Z,Brasileirão Série A,América-MG,Athletico-PR,2.5,3.0,2.75,1.8,1.8,1.38,1.47,1.32,1.07,7.25,1.35,2.85,2.05,1.63,3.6,1.24
+Futebol,2023-06-11T19:00:00Z,Brasileirão Série A,Internacional,Vasco,1.9,3.4,4.2,1.95,1.75,1.22,1.85,1.31,1.07,7.75,1.37,2.9,2.1,1.66,3.7,1.24
+Futebol,2023-06-11T19:00:00Z,Brasileirão Série A,São Paulo,Palmeiras,3.0,3.3,2.35,1.8,1.88,1.57,1.37,1.32,1.07,8.25,1.34,3.0,2.0,1.72,3.5,1.27
+Futebol,2023-06-11T21:30:00Z,Brasileirão Série A,Goiás,Fluminense,3.6,3.25,2.15,1.93,1.75,1.68,1.28,1.33,1.08,7.25,1.39,2.8,2.15,1.62,3.9,1.23
+Futebol,2023-06-11T21:30:00Z,Brasileirão Série A,Flamengo,Grêmio,1.58,4.1,5.5,1.77,1.93,1.15,2.3,1.23,4.8,1.16,2.7,1.41,1.7,2.05,1.23,3.8
+Futebol,2023-06-11T17:00:00Z,Major League Soccer,St. Louis City SC,LA Galaxy,1.93,3.8,3.4,1.51,2.37,1.29,1.82,1.25,3.9,1.22,2.3,1.55,1.53,2.3,1.17,4.6
+Futebol,2023-06-12T02:00:00Z,Major League Soccer,Portland Timbers,FC Dallas,2.05,3.4,3.4,1.73,1.98,1.3,1.72,1.29,1.05,9.25,1.28,3.4,1.83,1.85,3.1,1.33
+Futebol,2023-06-17T19:30:00Z,Major League Soccer,New York City FC,Columbus Crew,2.2,3.5,3.0,1.65,2.1,1.37,1.62,1.29,5.25,1.13,2.85,1.37,1.75,1.93,1.25,3.6
+Futebol,2023-06-17T23:30:00Z,Major League Soccer,New England Revolution,Orlando City,1.83,3.75,3.8,1.65,2.1,1.25,1.9,1.25,4.75,1.16,2.65,1.41,1.68,2.05,1.22,3.9
+Futebol,2023-06-17T23:30:00Z,Major League Soccer,D.C. United,Real Salt Lake,1.68,3.9,4.5,1.68,2.0,1.19,2.1,1.24,4.75,1.16,2.65,1.42,1.66,2.05,1.22,3.9
+Futebol,2023-06-18T00:30:00Z,Major League Soccer,Sporting Kansas City,Los Angeles FC,2.2,3.5,3.0,1.53,2.3,1.37,1.63,1.28,4.33,1.19,2.45,1.47,1.61,2.15,1.2,4.2
+Futebol,2023-06-18T00:30:00Z,Major League Soccer,Nashville SC,St. Louis City SC,1.58,4.1,5.25,1.75,1.93,1.15,2.3,1.22,4.75,1.16,2.65,1.42,1.66,2.05,1.22,3.9
+Futebol,2023-06-18T02:30:00Z,Major League Soccer,San Jose Earthquakes,Portland Timbers,1.82,3.8,3.9,1.65,2.1,1.24,1.93,1.25,4.75,1.16,2.65,1.42,1.66,2.05,1.22,3.9
+Futebol,2023-06-11T19:00:00Z,LaLiga 2,Alavés,Levante,2.25,2.9,3.25,2.15,1.6,1.31,1.58,1.38,1.11,5.75,1.53,2.3,2.55,1.44,5.0,1.15
+Futebol,2023-06-11T18:30:00Z,Série B,SSC Bari,Cagliari,2.6,3.1,2.75,1.95,1.75,1.43,1.46,1.35,1.09,6.75,1.42,2.65,2.25,1.57,4.1,1.2

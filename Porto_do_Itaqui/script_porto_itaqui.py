@@ -28,13 +28,15 @@ driver.get("https://www.portodoitaqui.com/porto-agora/navios")
 
 time.sleep(5)
 
-n_esp = 'atracados'
-n_atra = 'esperados'
+n_atra = 'atracados'
+
 n_fundi = 'fundeados'
 
-element1 = driver.find_element(By.ID, f'{n_esp}')
-element2 = driver.find_element(By.ID, f'{n_atra}')
-element3 = driver.find_element(By.ID, f'{n_fundi}')
+n_esp = 'esperados'
+
+element1 = driver.find_element(By.ID, f'{n_atra}')
+element2 = driver.find_element(By.ID, f'{n_fundi}')
+element3 = driver.find_element(By.ID, f'{n_esp}')
 
 
 html_element1 = element1.get_attribute('outerHTML')
@@ -46,35 +48,36 @@ soup2 = BeautifulSoup(html_element2, 'html.parser')
 soup3 = BeautifulSoup(html_element3, 'html.parser')
 
 Navios_Atracados = {'Berco': [], 'IMO': [], 'NAVIO': [], 'Operacao': [], 'Bordo': [
-], 'Comp(m)': [], 'DWT': [], 'Carga': [], 'QTD.CARGA': [], 'Calado': [], 'Agencia': [],'Prev de Chegada':[], 'Ultima_Atualizao': []}
-Navios_Esperando = {'Berco': [], 'IMO': [], 'NAVIO': [], 'Operacao': [], 'Bordo': [
-], 'Comp(m)': [], 'DWT': [], 'Carga': [], 'QTD.CARGA': [], 'Calado': [], 'Agencia': [], 'Ultima_Atualizao': []}
-Navios_Fundeados = {'Berco': [], 'IMO': [], 'NAVIO': [], 'Operacao': [], 'Bordo': [
-], 'Comp(m)': [], 'DWT': [], 'Carga': [], 'QTD.CARGA': [], 'Calado': [], 'Agencia': [], 'Ultima_Atualizao': []}
+], 'Comp(m)': [], 'DWT': [], 'Carga': [], 'QTD.CARGA': [], 'Calado': [], 'Agencia': [],'Ultima_Atualizao': []}
 
-navios_esp = 0
-navios_fundi = 0
+Navios_Esperando = {'IMO': [], 'NAVIO': [], 'Operacao': [],'Comp(m)': [], 'DWT': [], 'Carga': [], 'QTD.CARGA': [], 'Calado': [], 'Agencia': [],'Prev Chegada': [], 'Ultima_Atualizao': []}
+Navios_Fundeados = {'IMO': [], 'NAVIO': [], 'Operacao': [], 'Comp(m)': [], 'DWT': [], 'Carga': [], 'QTD.CARGA': [], 'Calado': [], 'Agencia': [], 'Ultima_Atualizao': []}
+
+
 navios_atrac = 0
+navios_fundi = 0
+navios_esp = 0
 
 for n_navio in soup1.find_all("tr"):
 
-    navios_esp = navios_esp + 1
-
-print("Numero de Navios Esperandos : ", navios_esp - 1)
-
-for n_navio in soup2.find_all("tr"):
-
     navios_atrac = navios_atrac + 1
 
-print("Numero de Navios Atracados: ", navios_atrac - 1)
+print("Numero de Navios Atracados : ", navios_atrac - 1)
 
-for n_navio in soup3.find_all("tr"):
+
+for n_navio in soup2.find_all("tr"):
 
     navios_fundi = navios_fundi + 1
 
 print("Numero de Navios Fundeados : ", navios_fundi - 1)
 
+for n_navio in soup3.find_all("tr"):
 
+    navios_esp = navios_esp + 1
+
+print("Numero de Navios Esperandos: ", navios_esp - 1)
+
+#NAVIOS ATRACADOS
 colun1 = 0
 colun2 = 1
 colun3 = 2
@@ -88,23 +91,23 @@ colun10 = 9
 colun11 = 10
 colun12 = 11
 
-for esp in range(navios_esp):
+for esp in range(navios_atrac):
 
     try:
         coluna = soup1.find_all("td")
 
-        Navios_Esperando['Berco'].append(coluna[colun1].text)
-        Navios_Esperando['IMO'].append(coluna[colun2].text)
-        Navios_Esperando['NAVIO'].append(coluna[colun3].text)
-        Navios_Esperando['Operacao'].append(coluna[colun4].text)
-        Navios_Esperando['Bordo'].append(coluna[colun5].text)
-        Navios_Esperando['Comp(m)'].append(coluna[colun6].text)
-        Navios_Esperando['DWT'].append(coluna[colun7].text)
-        Navios_Esperando['Carga'].append(coluna[colun8].text)
-        Navios_Esperando['QTD.CARGA'].append(coluna[colun9].text)
-        Navios_Esperando['Calado'].append(coluna[colun10].text)
-        Navios_Esperando['Agencia'].append(coluna[colun11].text)
-        Navios_Esperando['Ultima_Atualizao'].append(coluna[colun12].text)
+        Navios_Atracados['Berco'].append(coluna[colun1].text)
+        Navios_Atracados['IMO'].append(coluna[colun2].text)
+        Navios_Atracados['NAVIO'].append(coluna[colun3].text)
+        Navios_Atracados['Operacao'].append(coluna[colun4].text)
+        Navios_Atracados['Bordo'].append(coluna[colun5].text)
+        Navios_Atracados['Comp(m)'].append(coluna[colun6].text)
+        Navios_Atracados['DWT'].append(coluna[colun7].text)
+        Navios_Atracados['Carga'].append(coluna[colun8].text)
+        Navios_Atracados['QTD.CARGA'].append(coluna[colun9].text)
+        Navios_Atracados['Calado'].append(coluna[colun10].text)
+        Navios_Atracados['Agencia'].append(coluna[colun11].text)
+        Navios_Atracados['Ultima_Atualizao'].append(coluna[colun12].text)
 
         colun1 = colun1 + 12
         colun2 = colun2 + 12
@@ -119,14 +122,20 @@ for esp in range(navios_esp):
         colun11 = colun11 + 12
         colun12 = colun12 + 12
 
+
     except:
         pass
-    
-df = pd.DataFrame(list(zip(Navios_Esperando['Berco'], Navios_Esperando['IMO'], Navios_Esperando['NAVIO'], Navios_Esperando['Operacao'], Navios_Esperando['Bordo'], Navios_Esperando['Comp(m)'], Navios_Esperando['DWT'],
-                  Navios_Esperando['Carga'], Navios_Esperando['QTD.CARGA'], Navios_Esperando['Calado'], Navios_Esperando['Agencia'], Navios_Esperando['Ultima_Atualizao'])), columns=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"])
-df.to_csv("/home/aline/Documentos/PROJETO_3/Porto_do_Itaqui/dados_dos_navios_esperando.csv", index=False)
+       
+
+
+df = pd.DataFrame(list(zip(Navios_Atracados['Berco'],Navios_Atracados['IMO'], Navios_Atracados['NAVIO'], Navios_Atracados['Operacao'], Navios_Atracados['Bordo'],Navios_Atracados['Comp(m)'], Navios_Atracados['DWT'],
+                  Navios_Atracados['Carga'], Navios_Atracados['QTD.CARGA'], Navios_Atracados['Calado'], Navios_Atracados['Agencia'], Navios_Atracados['Ultima_Atualizao'])), columns=["BERCO", "IMO", "NAVIO", "OPERACAO", "BORDO", "COMP", "DWT", "CARGA", "QTD CARGA", "CALADO","AGENCIA", "UTIMA ATUALIZACAO"])
+df.to_csv("/home/aline/Documentos/PROJETO_3/Porto_do_Itaqui/dados_dos_navios_atracados.csv", index=False)
 # print(df)
-print("Dados dos Navios - Esperando Salvos")
+print("Dados dos Navios - Atracados Salvos")
+
+
+#NAVIOS FUNDEADOS
 
 colun1 = 0
 colun2 = 1
@@ -143,13 +152,11 @@ colun10 = 9
 for esp in range(navios_fundi):
 
     try:
-        coluna = soup3.find_all("td")
+        coluna = soup2.find_all("td")
 
-        #Navios_Fundeados['Berco'].append(coluna[colun1].text)
         Navios_Fundeados['IMO'].append(coluna[colun1].text)
         Navios_Fundeados['NAVIO'].append(coluna[colun2].text)
         Navios_Fundeados['Operacao'].append(coluna[colun3].text)
-        #Navios_Fundeados['Bordo'].append(coluna[colun5].text)
         Navios_Fundeados['Comp(m)'].append(coluna[colun4].text)
         Navios_Fundeados['DWT'].append(coluna[colun5].text)
         Navios_Fundeados['Carga'].append(coluna[colun6].text)
@@ -175,10 +182,12 @@ for esp in range(navios_fundi):
         pass
     
 df = pd.DataFrame(list(zip( Navios_Fundeados['IMO'], Navios_Fundeados['NAVIO'], Navios_Fundeados['Operacao'], Navios_Fundeados['Comp(m)'], Navios_Fundeados['DWT'],
-                  Navios_Fundeados['Carga'], Navios_Fundeados['QTD.CARGA'], Navios_Fundeados['Calado'], Navios_Fundeados['Agencia'], Navios_Fundeados['Ultima_Atualizao'])), columns=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+                  Navios_Fundeados['Carga'], Navios_Fundeados['QTD.CARGA'], Navios_Fundeados['Calado'], Navios_Fundeados['Agencia'], Navios_Fundeados['Ultima_Atualizao'])), columns=["IMO", "NAVIO", "OPERACAO", "COMP", "DWT", "CARGA", "QTD CARGA", "CALADO", "AGENCIA", "ULTIMA ATUALIZACAO"])
 df.to_csv("/home/aline/Documentos/PROJETO_3/Porto_do_Itaqui/dados_dos_navios_fundeados.csv", index=False)
 # print(df)
 print("Dados dos Navios -  Fundeados Salvos")
+
+#NAVIOS ESPERANDOS
 
 colun1 = 0
 colun2 = 1
@@ -192,25 +201,22 @@ colun9 = 8
 colun10 = 9
 colun11 = 10
 
-
-for esp in range(navios_atrac):
+for esp in range(navios_esp):
 
     try:
-        coluna = soup2.find_all("td")
+        coluna = soup3.find_all("td")
 
-        #Navios_Atracados['Berco'].append(coluna[colun1].text)
-        Navios_Atracados['IMO'].append(coluna[colun1].text)
-        Navios_Atracados['NAVIO'].append(coluna[colun2].text)
-        Navios_Atracados['Operacao'].append(coluna[colun3].text)
-        #Navios_Atracados['Bordo'].append(coluna[colun5].text)
-        Navios_Atracados['Comp(m)'].append(coluna[colun4].text)
-        Navios_Atracados['DWT'].append(coluna[colun5].text)
-        Navios_Atracados['Carga'].append(coluna[colun6].text)
-        Navios_Atracados['QTD.CARGA'].append(coluna[colun7].text)
-        Navios_Atracados['Calado'].append(coluna[colun8].text)
-        Navios_Atracados['Agencia'].append(coluna[colun9].text)
-        Navios_Atracados['Prev de Chegada'].append([colun10].text)
-        Navios_Atracados['Ultima_Atualizao'].append(coluna[colun11].text)
+        Navios_Esperando['IMO'].append(coluna[colun1].text)
+        Navios_Esperando['NAVIO'].append(coluna[colun2].text)
+        Navios_Esperando['Operacao'].append(coluna[colun3].text)
+        Navios_Esperando['Comp(m)'].append(coluna[colun4].text)
+        Navios_Esperando['DWT'].append(coluna[colun5].text)
+        Navios_Esperando['Carga'].append(coluna[colun6].text)
+        Navios_Esperando['QTD.CARGA'].append(coluna[colun7].text)
+        Navios_Esperando['Calado'].append(coluna[colun8].text)
+        Navios_Esperando['Agencia'].append(coluna[colun9].text)
+        Navios_Esperando['Prev Chegada'].append(coluna[colun10].text)
+        Navios_Esperando['Ultima_Atualizao'].append(coluna[colun11].text)
 
         colun1 = colun1 + 11
         colun2 = colun2 + 11
@@ -223,16 +229,13 @@ for esp in range(navios_atrac):
         colun9 = colun9 + 11
         colun10 = colun10 + 11
         colun11 = colun11 + 11
-      
-
-
+     
     except:
         pass
-       
-
-
-df = pd.DataFrame(list(zip(Navios_Atracados['IMO'], Navios_Atracados['NAVIO'], Navios_Atracados['Operacao'], Navios_Atracados['Comp(m)'], Navios_Atracados['DWT'],
-                  Navios_Atracados['Carga'], Navios_Atracados['QTD.CARGA'], Navios_Atracados['Calado'], Navios_Atracados['Agencia'],Navios_Atracados['Prev de Chegada'], Navios_Atracados['Ultima_Atualizao'])), columns=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"])
-df.to_csv("/home/aline/Documentos/PROJETO_3/Porto_do_Itaqui/dados_dos_navios_atracados.csv", index=False)
+    
+df = pd.DataFrame(list(zip(Navios_Esperando['IMO'], Navios_Esperando['NAVIO'], Navios_Esperando['Operacao'],Navios_Esperando['Comp(m)'], Navios_Esperando['DWT'],
+                  Navios_Esperando['Carga'], Navios_Esperando['QTD.CARGA'], Navios_Esperando['Calado'], Navios_Esperando['Agencia'],Navios_Esperando['Prev Chegada'],Navios_Esperando['Ultima_Atualizao'])), columns=["IMO", "NAVIO", "OPERACAO", "COMP(M)", "DWT", "CARGA", "QTD CARGA", "CALADO", "AGENCIA", "PREV CHEGADA", "ULTIMA ATUALIZAÇÃO"])
+df.to_csv("/home/aline/Documentos/PROJETO_3/Porto_do_Itaqui/dados_dos_navios_esperando.csv", index=False)
 # print(df)
-print("Dados dos Navios - Atracados Salvos")
+print("Dados dos Navios - Esperando Salvos")
+
