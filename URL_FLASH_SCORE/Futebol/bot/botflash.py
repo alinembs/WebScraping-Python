@@ -2,8 +2,8 @@ from selenium import webdriver
 import telegram
 import requests
 import json
-token = '5920378284:AAF020DWWtLBFeMF1UxbRcs8S0dNQh1oqfs'
-chat_id = '-1001501436313'
+token = ''
+chat_id = ''
 # Instanciando o Objeto ChromeOptions
 options = webdriver.ChromeOptions()
 
