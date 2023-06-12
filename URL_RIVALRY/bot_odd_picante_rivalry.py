@@ -11,8 +11,8 @@ from tqdm import tqdm
 import telegram
 import requests
 import json
-token = '5920378284:AAF020DWWtLBFeMF1UxbRcs8S0dNQh1oqfs'
-chat_id = '-1001501436313'
+token = ''
+chat_id = ''
 #other imports
 chromedriver.install(cwd=True)
 
