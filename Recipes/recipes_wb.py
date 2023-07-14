@@ -1,8 +1,8 @@
 # other imports
 import pandas as pd
 from tqdm import tqdm
-from bs4 import BeautifulSoup
 import requests
+from recipes_drive import*
 
 recipes = {'title':[],'prep':[],'serves':[],'descrip':[],'prep_steps':[]}
 
@@ -22,22 +22,10 @@ for  div in soup.find_all('a'):
         link_ant = link
 
 for link in tqdm(range(len(list_link))):
-    recipe_ant = ""
-    recipe_link = []
-    url = (f'https://myfoodbook.com.au{list_link[link]}')
-    response = requests.request("GET", url, data=payload)
-    soup1 = BeautifulSoup(response.text, 'html.parser')
-    
-    for div in soup1.find_all('a'):
-            link = div.get('href')
-          
-            if ("/recipes/show/" in link) and (recipe_ant != link):
-                
-                recipe_link.append(link)
-
-            recipe_ant = link
-
-    for range_recipes in range(12):
+  
+    recipe_link = category_link(list_link[link])
+    print(recipe_link)
+    """ for range_recipes in range(2):
              
             url = (f'https://myfoodbook.com.au{recipe_link[range_recipes]}')
             response = requests.request("GET", url, data=payload)
@@ -58,10 +46,8 @@ for link in tqdm(range(len(list_link))):
 
             method = soup.find("div",{"class":"method"})
 
-            recipes["prep_steps"].append(ingredients + "--" + method.text) 
+            recipes["prep_steps"].append(ingredients + "--" + method.text)  """
            
-   
-    
-#df = pd.DataFrame(list(zip(recipes["title"],recipes["descrip"],recipes["prep"],recipes["serves"],recipes["prep_steps"])), columns=["title", "descrip", "prep", "serves", "prep_steps"])
-#df.to_csv("/home/aline/Documentos/PROJETO_3/Recipes/receitas_salvas_site.csv", index=False)
-#print("Receitas Salvas")
+df = pd.DataFrame(list(zip(recipes["title"],recipes["descrip"],recipes["prep"],recipes["serves"],recipes["prep_steps"])), columns=["title", "descrip", "prep", "serves", "prep_steps"])
+df.to_csv("/home/aline/Downloads/webscraping/WebScraping-Python/Recipes/receitas_salvas_site.csv", index=False)
+print("Receitas Salvas")
